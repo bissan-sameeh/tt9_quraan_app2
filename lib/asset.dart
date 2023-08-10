@@ -6,8 +6,7 @@ class Asset {
     String result = await rootBundle.loadString('assets/hafs_smart_v8.json');
     if (result.isNotEmpty) {
       List<dynamic> ayahs = jsonDecode(result);
-      List<dynamic> pageAyah =
-          ayahs.where((element) => element['page'] == page).toList();
+      List<dynamic> pageAyah = ayahs.where((element) => element['page'] == page).toList();
       print(pageAyah);
       return pageAyah;
     }

@@ -10,6 +10,7 @@ class Network {
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
     }
+
     return Future.error('error');
   }
 }
